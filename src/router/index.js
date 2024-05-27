@@ -5,8 +5,6 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 
 const routes = [
-
-
   {
     path: '/',
     name: 'public',
@@ -48,6 +46,41 @@ const routes = [
         path: '/dashboard',
         name: 'dashboard',
         component: () => import('@/views/dashboard/Dashboard.vue')
+      },
+      {
+        path: '/products',
+        name: 'products',
+        component: () => import('@/views/products/Product.vue')
+      },
+      {
+        path: '/calendar',
+        name: 'calendar',
+        component: () => import('@/views/products/Product.vue')
+      },
+      {
+        path: '/documents',
+        name: 'documents',
+        component: () => import('@/views/products/Product.vue')
+      },
+      {
+        path: '/reports',
+        name: 'reports',
+        component: () => import('@/views/products/Product.vue')
+      },
+      {
+        path: '/engineering',
+        name: 'engineering',
+        component: () => import('@/views/enginnerings/Enginnering.vue')
+      },
+      {
+        path: '/human-resources',
+        name: 'human-resources',
+        component: () => import('@/views/products/Product.vue')
+      },
+      {
+        path: '/customer',
+        name: 'customer',
+        component: () => import('@/views/products/Product.vue')
       },
     ]
   },
