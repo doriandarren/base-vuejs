@@ -1,4 +1,3 @@
-import { RouterLink } from 'vue-router';
 <template>
     <!-- <header class="bg-gray-800 text-white p-4">
         <h1>Mi Sitio Web</h1>
