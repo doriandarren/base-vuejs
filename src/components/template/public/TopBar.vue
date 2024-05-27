@@ -15,7 +15,7 @@ import { RouterLink } from 'vue-router';
             </RouterLink>
 
             <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-                <RouterLink to="/login" class="mr-5 hover:text-gray-900">Login</RouterLink>
+                <RouterLink to="/login" class="mr-5 hover:text-gray-900">{{ $t("login") }}</RouterLink>
                 <!-- <a class="mr-5 hover:text-gray-900">Second Link</a> -->
             </nav>
         </div>
