@@ -15,18 +15,18 @@ const routes = [
       {
         path: '/',
         name: 'home',
-        component: () => import('../views/home/HomeView.vue')
+        component: () => import('@/views/home/HomeView.vue')
       },
     
       {
         path: '/login',
         name: 'login',
-        component: () => import('../views/login/Login.vue')
+        component: () => import('@/views/login/Login.vue')
       },
       {
         path: '/dashboard',
         name: 'dashboard',
-        component: () => import('../views/dashboard/Dashboard.vue')
+        component: () => import('@/views/dashboard/Dashboard.vue')
       },
     ]
   },
