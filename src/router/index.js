@@ -5,22 +5,34 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 
 const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: () => import('../views/home/HomeView.vue')
-  },
+
 
   {
-    path: '/login',
-    name: 'login',
-    component: () => import('../views/login/Login.vue')
+    path: '/',
+    name: 'public',
+    component: () => import('@/components/template/public/Main.vue'),
+    children: [
+      {
+        path: '/',
+        name: 'home',
+        component: () => import('../views/home/HomeView.vue')
+      },
+    
+      {
+        path: '/login',
+        name: 'login',
+        component: () => import('../views/login/Login.vue')
+      },
+      {
+        path: '/dashboard',
+        name: 'dashboard',
+        component: () => import('../views/dashboard/Dashboard.vue')
+      },
+    ]
   },
-  {
-    path: '/dashboard',
-    name: 'dashboard',
-    component: () => import('../views/dashboard/Dashboard.vue')
-  },
+
+
+  
 
 
 

@@ -1,7 +1,7 @@
 <template>
 
   <div class="min-h-screen flex flex-col">
-    <Header />
+    
     
     <main class="flex-grow container mx-auto px-4">
 
@@ -170,15 +170,11 @@
       </div>
     </section>
 
-
-    <Footer />
-
   </div>
 </template>
 
 <script setup>
 
-import Header from '@/components/template/public/Header.vue';
-import Footer from '@/components/template/public/Footer.vue';
+
 
 </script>
