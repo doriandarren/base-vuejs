@@ -1,24 +1,18 @@
 <template>
-
-    <Header />
-
-
-    <div class="container mx-auto">
-        <RouterView />
+    <div class="flex flex-col min-h-screen">
+        <TopBar />
+        <main class="flex-grow">
+            <router-view />
+        </main>
+        <Footer />
     </div>
-
-    <!-- <RouterView /> -->
-
-    <Footer />
 </template>
 
 <script setup>
 
 import { RouterView } from 'vue-router';
 import Footer from '@/components/template/public/Footer.vue';
-import Header from '@/components/template/public/Header.vue';
-
-
+import TopBar from '@/components/template/public/TopBar.vue';
 
 </script>
 
