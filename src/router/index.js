@@ -80,7 +80,7 @@ const routes = [
   { 
     path: '/:path(.*)', 
     name: "NotFound",
-    component: () => import('@/views/sessions/404.vue'), 
+    component: () => import('@/modules/auth/views/sessions/404.vue'), 
   },
 ];
 
