@@ -2,9 +2,9 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 
 
-
-
 const routes = [
+
+  /** Public routes */
   {
     path: '/',
     name: 'public',
@@ -19,22 +19,13 @@ const routes = [
       {
         path: '/login',
         name: 'login',
-        component: () => import('@/views/login/Login.vue')
-      },
-      {
-        path: '/dashboard',
-        name: 'dashboard',
-        component: () => import('@/views/dashboard/Dashboard.vue')
+        component: () => import('@/modules/auth/views/login/Login.vue')
       },
     ]
   },
 
 
-  
-
-
-
-  /** Rutas protegidas */
+  /** Private public */
   {
     path: '/',
     name: 'main',
