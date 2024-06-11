@@ -7,8 +7,13 @@
 
         <div class="w-full mb-5">
             <label class="block mb-1" for="correo">{{ $t("login_form.email") }}</label>
-            <input class="w-full h-10 px-3 text-base placeholder-gray-600 border rounded-lg focus:shadow-outline"
-                type="text" id="correo" v-model="correo" />
+            <input 
+                class="w-full h-10 px-3 text-base placeholder-gray-600 border rounded-lg focus:shadow-outline"
+                type="text" 
+                id="correo" 
+                v-model="email" 
+                required
+            />
         </div>
 
 
@@ -17,8 +22,13 @@
             <label class="block mb-1" for="correo">{{ $t("login_form.password") }}</label>
 
             <div class="relative">
-                <input class="w-full h-10 px-3 text-base placeholder-gray-600 border rounded-lg focus:shadow-outline"
-                    :type="showPassword ? 'text' : 'password'" id="password" v-model="password" />
+                <input 
+                    class="w-full h-10 px-3 text-base placeholder-gray-600 border rounded-lg focus:shadow-outline"
+                    :type="showPassword ? 'text' : 'password'" 
+                    id="password" 
+                    v-model="password" 
+                    required
+                />
                 <div class="absolute inset-y-0 right-0 flex items-center px-2">
                     <button type="button" @click.prevent="togglePasswordVisibility">
                         <img 
@@ -60,7 +70,7 @@ import Preloader from '@/components/preloader/Preloader.vue';
 const loading = ref(false);
 
 
-const correo = ref('');
+const email = ref('');
 const password = ref('');
 const message = ref('');
 const router = useRouter();
@@ -82,7 +92,7 @@ const submit = async () => {
     //set value
     loading.value = true; 
 
-    if (!correo.value || !password.value) {
+    if (!email.value || !password.value) {
         message.value = 'los dos campos son requeridos';
         return;
     }
