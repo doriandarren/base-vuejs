@@ -37,12 +37,22 @@
   },
   "login_form":{
     "title": "Entra con tu cuenta",
-    "email" : "Correo",
+    "subtitle": "Bienvenido{'@'} a la plataforma GlobalFleet Office, tu plataforma de gestión de viajes, telemática, comunicaciones y mucho más.",
+    "email_placeholder": "Correo electrónico",
+    "password_placeholder": "Contraseña",
+    "remember": "Recuérdame",
+    "email" : "Correo electrónico",
     "password" : "Contraseña",
-    "sign_in": "Login",
+    "sign_in": "Acceder",
     "remember_me": "Recuerdame",
     "forgot_password": "Olvidaste la contraseña?",
-    "or_continue_with": "Continuar con"
+    "forgot": "¿Olvidaste tu contraseña?",
+    "btn_login": "Acceder",
+    "or_continue_with": "Continuar con",
+    "terms_txt1": "Al acceder estás de acuerdo con nuestros ",
+    "terms_txt2": "Términos y Condiciones",
+    "terms_txt3": "y nuestra",
+    "terms_txt4": "Política de Privacidad"
   },
   "form": {
     "required": "Requerido"

@@ -20,7 +20,7 @@
                 <input class="w-full h-10 px-3 text-base placeholder-gray-600 border rounded-lg focus:shadow-outline"
                     :type="showPassword ? 'text' : 'password'" id="password" v-model="password" />
                 <div class="absolute inset-y-0 right-0 flex items-center px-2">
-                    <button type="button" @click="togglePasswordVisibility">
+                    <button type="button" @click.prevent="togglePasswordVisibility">
                         <img 
                             class="w-6 h-6"
                             :src="showPassword ? '/eye_off.svg' : '/eye_on.svg'"
@@ -35,7 +35,7 @@
         <div class="mt-5 flex flex-row justify-center">
             <button
                 class="h-10 px-5 text-green-100 transition-colors duration-150 bg-green-700 rounded-lg focus:shadow-outline hover:bg-green-800"
-                @click="submit">
+                @click.prevent="submit">
                 {{ $t("login_form.sign_in") }}
             </button>
         </div>
