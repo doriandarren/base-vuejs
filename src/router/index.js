@@ -1,4 +1,14 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router';
+//import { useAuthenticationStore } from '@/stores/auth/authentication';
+
+
+/**
+ * RequiredAuth
+ */
+// const requireAuth = async(to, from, next) => {
+//   next();
+// }
+
 
 
 
@@ -32,6 +42,7 @@ const routes = [
     component: () => import('@/components/template/private/Main.vue'),
     redirect: '/dashboard',
     meta: { requiresAuth: true },
+    // beforeEnter: requireAuth,
     children: [
       {
         path: '/dashboard',
