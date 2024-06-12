@@ -34,8 +34,8 @@ export const useAuthenticationStore = defineStore('authentication', () => {
         
         
 
-        if (data.success) {
-          loginResponse.value = data;
+        if (data.data.success) {
+          loginResponse.value = data.data;
           localStorage.setItem('site_token', data.token);
         } else {
           authErrors.value = data.errors;

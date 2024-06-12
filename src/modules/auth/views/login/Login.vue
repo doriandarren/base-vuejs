@@ -113,16 +113,17 @@ const submit = async () => {
     // loading.value = false; 
     // await login(correo.value, password.value);
     
-    // if (loginResponse.value.success) {
+    // if(!loginResponse.value){
+    //     loading.value = false;
+    //     await Toast('Claves de acceso no válidas', 'error');
+    // }else {
     //     loading.value = false;
     //     router.push('/dashboard');
     // }
-    
+
+
 
     //console.log(authErrors.value);
-
-
-
 
 
 
