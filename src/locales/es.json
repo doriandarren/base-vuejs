@@ -52,7 +52,8 @@
     "terms_txt1": "Al acceder estás de acuerdo con nuestros ",
     "terms_txt2": "Términos y Condiciones",
     "terms_txt3": "y nuestra",
-    "terms_txt4": "Política de Privacidad"
+    "terms_txt4": "Política de Privacidad",
+    "credential_error": "Claves de acceso no válidas"
   },
   "form": {
     "required": "Requerido"

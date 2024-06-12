@@ -54,17 +54,20 @@
             {{ message }}
         </div>
 
-
     </div>
+    
 </template>
 
 <script setup>
 import { ref, toRefs } from 'vue';
 import { storeToRefs } from 'pinia';
 import { useRouter } from 'vue-router';
+import { useI18n } from "vue-i18n";
+
 import Preloader from '@/components/preloader/Preloader.vue';
 // import { useAuthenticationStore } from '@/stores/auth/authentication';
 
+const { t } = useI18n();
 
 //init
 const loading = ref(false);
@@ -107,24 +110,19 @@ const submit = async () => {
     // }
 
 
-
-
-
+    /**
+     * UNCOMMENT
+     */
     // loading.value = false; 
     // await login(correo.value, password.value);
     
     // if(!loginResponse.value){
     //     loading.value = false;
-    //     await Toast('Claves de acceso no válidas', 'error');
+    //     await Toast(t("login_form.credential_error"), 'error');
     // }else {
     //     loading.value = false;
     //     router.push('/dashboard');
     // }
-
-
-
-    //console.log(authErrors.value);
-
 
 
 
