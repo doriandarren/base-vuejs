@@ -1,12 +1,32 @@
 import { createRouter, createWebHistory } from 'vue-router';
 //import { useAuthenticationStore } from '@/stores/auth/authentication';
+//import { storeToRefs } from 'pinia';
 
 
 /**
  * RequiredAuth
  */
 // const requireAuth = async(to, from, next) => {
-//   next();
+
+//   //document.title = `${to.name} - ${import.meta.env.VITE_APP_TITLE}`;
+//   // if(!localStorage.getItem('locale')){
+//   //   localStorage.setItem('locale', 'ES');
+//   // }
+
+//   const authStore = useAuthenticationStore();
+//   const { currentUser } = authStore;
+//   const { user } = storeToRefs(authStore); 
+
+//   await currentUser();
+
+//   console.log(user.value);
+
+//   if(!user.value){
+//     next({name: "login" });
+//   }else{
+//     next();
+//   }
+
 // }
 
 

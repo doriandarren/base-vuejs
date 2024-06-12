@@ -58,7 +58,7 @@ export const useAuthenticationStore = defineStore('authentication', () => {
     user.value = '';
     authErrors.value = [];
 
-    let response;
+    //let response;
 
     await fetch(`${import.meta.env.VITE_API_URL}auth/user`, {
       method: "GET",
@@ -69,7 +69,8 @@ export const useAuthenticationStore = defineStore('authentication', () => {
     })
       .then(data => data.json())
       .then(data => {
-        response = data;
+        //response = data;
+        user.value = data.data;
       })
       .catch((e) => {
         if (localStorage.getItem('site_token')) {
@@ -79,7 +80,7 @@ export const useAuthenticationStore = defineStore('authentication', () => {
         console.log("Error:", e);
       });
 
-    return response;
+    //return response;
 
   }
 
