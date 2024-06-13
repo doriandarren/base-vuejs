@@ -185,9 +185,9 @@
 </template>
 
 <script setup>
-import { ref, watch } from 'vue'
-import { useRouter, useRoute } from 'vue-router'
-import { useI18n } from 'vue-i18n'
+import { ref, watch } from 'vue';
+import { useRouter, useRoute } from 'vue-router';
+import { useI18n } from 'vue-i18n';
 import {
   Dialog,
   DialogPanel,
@@ -197,7 +197,7 @@ import {
   MenuItems,
   TransitionChild,
   TransitionRoot,
-} from '@headlessui/vue'
+} from '@headlessui/vue';
 import {
   Bars3Icon,
   BellIcon,
@@ -208,8 +208,10 @@ import {
   UsersIcon,
   DocumentIcon,
   FolderIcon,
-} from '@heroicons/vue/24/outline'
-import { ChevronDownIcon, MagnifyingGlassIcon, ChevronRightIcon } from '@heroicons/vue/20/solid'
+} from '@heroicons/vue/24/outline';
+import { ChevronDownIcon, MagnifyingGlassIcon, ChevronRightIcon } from '@heroicons/vue/20/solid';
+
+
 
 // Importar traducciones
 const { t } = useI18n()
