@@ -177,6 +177,7 @@
       <main class="py-10">
         <div class="px-4 sm:px-6 lg:px-8">
           <!-- Your content -->
+          <Breadcrumb />
           <RouterView />
         </div>
       </main>
@@ -210,6 +211,7 @@ import {
   FolderIcon,
 } from '@heroicons/vue/24/outline';
 import { ChevronDownIcon, MagnifyingGlassIcon, ChevronRightIcon } from '@heroicons/vue/20/solid';
+import Breadcrumb from '@/components/template/private/Breadcrumb.vue';
 
 
 
