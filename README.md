@@ -39,3 +39,20 @@ npm install @headlessui/vue@latest
 npm install @heroicons/vue
 
 ```
+
+
+
+
+
+
+## Select combobox:
+
+```sh
+
+npm install vue-select@beta
+
+
+
+```
+
+
