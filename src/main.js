@@ -29,6 +29,8 @@ import VueGoodTablePlugin from 'vue-good-table-next';
 import 'vue-good-table-next/dist/vue-good-table-next.css';
 
 
+// VueSelect
+import vSelect from 'vue-select';
 
 
 const app = createApp(App)
@@ -43,5 +45,7 @@ app.use(i18n())
 app.use(VueGoodTablePlugin)
 
 app.directive('animate', animateDirective);
+
+app.component('v-select', vSelect);
 
 app.mount('#app')
