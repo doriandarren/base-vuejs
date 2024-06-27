@@ -23,6 +23,18 @@ npm run build
 
 
 
+## Banco de Imágenes:
+
+```sh
+
+https://picsum.photos/list
+
+
+```
+
+
+
+
 ### sweetalert
 
 Guide: [Vue Install](https://github.com/avil13/vue-sweetalert2).
@@ -446,5 +458,8 @@ Nota: para que funcione tuve que agregar en base.css en el ::before ::after:
 --vs-border-color: #ffffff;
 ...
 ```
+
+
+
 
 
