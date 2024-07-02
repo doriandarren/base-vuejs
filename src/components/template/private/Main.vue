@@ -212,11 +212,18 @@ import {
 } from '@heroicons/vue/24/outline';
 import { ChevronDownIcon, MagnifyingGlassIcon, ChevronRightIcon } from '@heroicons/vue/20/solid';
 import Breadcrumb from '@/components/template/private/Breadcrumb.vue';
+//import { useAuthenticationStore } from '@/stores/auth/authentication';
+
 
 
 
 // Importar traducciones
 const { t } = useI18n()
+
+
+//Logout
+//const authStore = useAuthenticationStore();
+//const { logout } = authStore;
 
 const navigation = [
   { name: 'Dashboard', href: 'dashboard', icon: HomeModernIcon, current: true },
