@@ -1,34 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router';
+// Auth
+import LoginRoutes from '../modules/auth/router';
+//Fake
+import FakeRoutes from '../modules/fake/router';
 //import { useAuthenticationStore } from '@/stores/auth/authentication';
 //import { storeToRefs } from 'pinia';
-
-
-/**
- * RequiredAuth
- */
-// const requireAuth = async(to, from, next) => {
-
-//   //document.title = `${to.name} - ${import.meta.env.VITE_APP_TITLE}`;
-//   // if(!localStorage.getItem('locale')){
-//   //   localStorage.setItem('locale', 'ES');
-//   // }
-
-//   const authStore = useAuthenticationStore();
-//   const { currentUser } = authStore;
-//   const { user } = storeToRefs(authStore); 
-
-//   await currentUser();
-
-//   console.log(user.value);
-
-//   if(!user.value){
-//     next({name: "login" });
-//   }else{
-//     next();
-//   }
-
-// }
-
 
 
 
@@ -46,11 +22,8 @@ const routes = [
         component: () => import('@/views/home/HomeView.vue')
       },
     
-      {
-        path: '/login',
-        name: 'login',
-        component: () => import('@/modules/auth/views/login/Login.vue')
-      },
+      /** Login */
+      ...LoginRoutes
     ]
   },
 
@@ -64,46 +37,10 @@ const routes = [
     meta: { requiresAuth: true },
     // beforeEnter: requireAuth,
     children: [
-      {
-        path: '/dashboard',
-        name: 'dashboard',
-        component: () => import('@/views/dashboard/Dashboard.vue')
-      },
-      {
-        path: '/products',
-        name: 'products',
-        component: () => import('@/views/products/Product.vue')
-      },
-      {
-        path: '/calendar',
-        name: 'calendar',
-        component: () => import('@/views/products/Product.vue')
-      },
-      {
-        path: '/documents',
-        name: 'documents',
-        component: () => import('@/views/products/Product.vue')
-      },
-      {
-        path: '/reports',
-        name: 'reports',
-        component: () => import('@/views/products/Product.vue')
-      },
-      {
-        path: '/engineering',
-        name: 'engineering',
-        component: () => import('@/views/enginnerings/Enginnering.vue')
-      },
-      {
-        path: '/human-resources',
-        name: 'human-resources',
-        component: () => import('@/views/products/Product.vue')
-      },
-      {
-        path: '/customer',
-        name: 'customer',
-        component: () => import('@/views/products/Product.vue')
-      },
+      
+      /** Fake Routes */
+      ...FakeRoutes,
+
     ]
   },
 
@@ -121,5 +58,33 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes
 })
+
+
+router.beforeEach(async (to, from, next) => {
+  // Actualizar el título de la página
+  document.title = `${to.name.charAt(0).toUpperCase() + to.name.slice(1)} - ${import.meta.env.VITE_APP_TITLE}`;
+  next();
+
+
+  // NO Delete - Validate Routes
+  // if (to.matched.some(record => record.meta.requiresAuth)) {
+  //   const { currentUser } = useAuthenticationStore();
+  //   let response = await currentUser();
+
+  //   try {
+  //     if (response) {
+  //       next();
+  //     } else {
+  //       next({ name: "login" });
+  //     }
+  //   } catch (e) {
+  //     console.log(e);
+  //     next({ name: "login" });
+  //   }
+  // } else {
+  //   next();
+  // }
+});
+
 
 export default router
