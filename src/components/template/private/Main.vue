@@ -245,10 +245,10 @@ const navigation = [
 
 const userNavigation = [
   { name: t('logout'), href: '/login' },
-  // { name: t('logout'), href: '#', onClick: () => submit() },
+  // { name: t('logout'), href: '#', onClick: () => sessionLogout() },
 ]
 
-const submit = async () => {
+const sessionLogout = async () => {
   // await logout()
 }
 
