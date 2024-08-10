@@ -22,6 +22,7 @@ export default {
         neutral: '#f5f5f5', // gris claro
         'neutral-dark': '#e0e0e0', // gris
         'neutral-light': '#fafafa', // gris más claro
+        navbar: '#111827', //Navbar
       },
     },
   },
