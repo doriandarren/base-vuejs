@@ -70,9 +70,9 @@
             <div class="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
                 <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
                     <LogoBrand />
-                    <span class="ml-3 text-xl">Website</span>
+                    <span class="ml-3 text-2xl font-bold">{{ siteName }}</span>
                 </a>
-                <p class="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">© {{ currentYear }} Site
+                <p class="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">© {{ currentYear }} Todos los derechos reservados
                 </p>
                 <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
                     <a class="text-gray-500">
@@ -117,6 +117,7 @@ import LogoBrand from '@/components/icons/IconBrand.vue';
 
 
 const currentYear = ref(new Date().getFullYear());
+const siteName = import.meta.env.VITE_APP_TITLE;
 
 </script>
 
