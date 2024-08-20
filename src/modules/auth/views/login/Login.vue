@@ -97,6 +97,7 @@ const submit = async () => {
 
     if (!email.value || !password.value) {
         message.value = 'los dos campos son requeridos';
+        loading.value = false; 
         return;
     }
 
