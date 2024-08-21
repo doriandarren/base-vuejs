@@ -14,7 +14,7 @@ import { defineProps } from 'vue'
 const props = defineProps({
     className: {
         type: String,
-        default: 'w-6 h-6 mr-1',
+        default: 'w-6 h-6 mr-1 text-primary',
     }
 })
 </script>
